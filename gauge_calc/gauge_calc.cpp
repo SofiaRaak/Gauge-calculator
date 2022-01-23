@@ -29,7 +29,8 @@ int main()
 	cout << "Please choose calculation: " << endl;
 	cout << "1: Calculate the number of rows required for a length in cm" << endl;
 	cout << "2: Calculate the number of stitches required for a width in cm" << endl;
-	cin >> option;
+	cout << "3: Estimate yarn class" << endl;
+	cin >> option; 
 	cout << endl;
 
 	switch (option) {
@@ -42,6 +43,8 @@ int main()
 		cin >> width;
 		cout << GC.how_many_stitches(width) << " stitches needed for " << width << "cm." << endl;
 		cout << endl;
+		break;
+	case 3: cout << "Estimated yarn class: " << GC.which_yarn_class() << endl;
 		break;
 	}
 
