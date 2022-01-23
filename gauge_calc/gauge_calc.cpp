@@ -2,19 +2,50 @@
 //
 
 #include <iostream>
+#include <string>
+#include "calcs.h"
+
+using namespace std;
+
+int sts;
+int rows;
+int option;
+float length;
+float width;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	//Gather gauge information
+	cout << "Enter number of stitches in 10cm:  " << endl;
+	cin >> sts;
+	cout << "Enter number of rows in 10 cm: " << endl;
+	cin >> rows;
+
+	//Enter gauge in object
+	GaugeCalculator GC (sts, rows);
+
+	//Provide options for calculations
+	cout << endl;
+	cout << "Please choose calculation: " << endl;
+	cout << "1: Calculate the number of rows required for a length in cm" << endl;
+	cout << "2: Calculate the number of stitches required for a width in cm" << endl;
+	cin >> option;
+	cout << endl;
+
+	switch (option) {
+	case 1: cout << "Enter length in cm: " << endl;
+		cin >> length;
+		cout << GC.how_many_rows(length) << " rows needed for " << length << " cm." << endl;
+		cout << endl;
+		break;
+	case 2: cout << "Enter width in cm: " << endl;
+		cin >> width;
+		cout << GC.how_many_stitches(width) << " stitches needed for " << width << "cm." << endl;
+		cout << endl;
+		break;
+	}
+
+	return 0;
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

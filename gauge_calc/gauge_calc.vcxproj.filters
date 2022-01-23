@@ -18,5 +18,13 @@
     <ClCompile Include="gauge_calc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="calcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="calcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
