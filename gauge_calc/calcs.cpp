@@ -51,3 +51,7 @@ std::string GaugeCalculator::which_yarn_class() {
 	return yarn_class;
 }
 
+//TODO
+//add equation to calculate decreases per nth row to go from x cm width to y cm width
+//add equation to calculate decreases per nth stitch when decreasing from x sts to y sts
+
